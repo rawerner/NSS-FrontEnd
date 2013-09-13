@@ -1,0 +1,73 @@
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps);
+@import url(http://fonts.googleapis.com/css?family=Gudea);
+
+body{
+  font-family: 'Gudea', sans-serif;
+  font-size: 14px;
+  background-color: #6B0000;
+  color: #fff;
+}
+
+section > p{
+  padding:10px;
+  line-height: 17px;
+}
+
+section > h2{
+  font-size: 18px;
+  line-height:20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-top:20px;
+  padding-left: 10px;
+}
+
+
+#logoimg{
+  float: left;
+  width: 60px;
+  height:60px;
+  border: 0px dashed red;
+  padding-top:10px;
+  padding-left:10px;
+  padding-bottom:10px;
+}
+
+#logotxt > h1{
+  float: left;
+  width: 400px;
+  border: 0px dashed red;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-size: 35px;
+  padding: 0px, 0, 0px, 0;
+  padding-top:20px;
+  padding-left:10px;
+}
+
+.clear{
+  clear: both;
+}
+
+ul li{
+  list-style: inside circle;
+  padding-left: 15px;
+}
+
+.section{
+  padding-left:10px;
+}
+
+section > p:nth-of-type(2n){
+  font-style: italic;
+  color: pink;
+}
+
+a:hover{
+background-color: white;
+}
+
+nav > a{
+  padding-top:10px;
+  padding-left:10px;
+  color: #fff;
+};

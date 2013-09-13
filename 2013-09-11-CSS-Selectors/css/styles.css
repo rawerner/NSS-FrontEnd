@@ -1,0 +1,40 @@
+/* this is a single line commnts */
+/* this
+is
+multi-line
+comment
+*/
+
+/* selecting by id */
+#div1{
+  color: #ff0000);
+}
+
+/* selecting by class*/
+.divs{
+  background-color: yellow;
+}
+
+/*selecting by tag*/
+p {
+  color: #00ff00;
+}
+a[href="http://google.com"]{
+  background-color: red;
+}
+
+a[href$="cnn.com"]{
+  background-color: green;
+}
+
+a[href*="facebook"]{
+  background-color: blue;
+}
+
+ul > li:nth-child(3) > span:nth-child(2n){
+  font-size: 25px;
+}
+
+a:hover{
+background-color: white;
+}
