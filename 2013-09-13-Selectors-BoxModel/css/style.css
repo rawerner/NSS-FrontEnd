@@ -1,0 +1,48 @@
+body{
+  background: url(../images/tile.jpeg) repeat;
+}
+body > div{
+  width: 960px;
+  height:500px;
+  margin: auto;
+  background-color: white;
+}
+
+h1 {
+  margin: 5px;
+}
+
+
+
+body > div > section:nth-child(1){
+  width:600px;
+  float:left;
+  border-right: 1px solid #000;
+}
+
+body > div > section:nth-child(2){
+  width: 359px;
+  float:left;
+
+}
+
+body > div > section:nth-child(1) p{
+  margin:0 5px 0 5px;
+  width: 290px;
+  float: left;
+  text-align: justify;
+}
+
+body > div > section:nth-child(2) p{
+  margin:0 20px 0 20px;
+  float: left;
+  text-align: justify;
+}
+
+body > div > section:nth-child(2) h1{
+  margin:5px 20px 5px 20px;
+}
+
+.clearfix{
+  clear:both;
+}
