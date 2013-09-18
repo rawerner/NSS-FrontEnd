@@ -1,0 +1,31 @@
+@import 'color';
+@import 'fonts';
+@import 'header';
+@import 'nav';
+@import 'content';
+@import 'footer';
+
+
+#main
+{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.clearfix
+{
+  clear:both;
+}
+
+a
+{
+  text-decoration: none;
+  color: $teslared;
+
+  &:hover
+  {
+    text-decoration: underline;
+    color: desaturate($teslared, 40%)
+  }
+}
+
