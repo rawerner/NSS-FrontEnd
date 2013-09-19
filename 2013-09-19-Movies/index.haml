@@ -1,0 +1,42 @@
+!!! 5
+%html{lang: 'en'}
+ %head
+ %meta{charset: 'utf-8'}
+ %title HAML & SASS TEMPLATE
+ %link{rel: 'stylesheet', href: 'css/normalize.css'}
+ %link{rel: 'stylesheet', href: 'css/style.css'}
+ %body
+  .main
+   %header
+    %h1 Movie Time
+   %nav
+    %ul
+     %li
+      %a{href: '#'} Jaws
+     %li
+      %a{href: '#'} Titantic
+     %li
+      %a{href: '#'} Lord Of The Rings
+   %section
+    %h1 Jaws
+    %h2 Attack of the Shark
+    %p
+     this is a very long
+     sentence so it goes over
+     multiple lines
+    %p
+     %span hello
+     %strong long
+     %strong world
+    %p#fun
+     this is a fun id :)
+     %strong
+    %p.class
+     this p tag is very classy ... lol
+    %p#oh.really.yes
+     this p tag has an id of oh and 2 classes
+    %a_div
+     this is just a div with an id of a_div
+    .class_div
+     this is one classy div
+   %footer
