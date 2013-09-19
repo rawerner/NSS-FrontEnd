@@ -21,14 +21,32 @@ nav ul {
     display: inline-block; }
 
 #content section h1 {
+  color: #990000;
+  font-family: "Prosto One", cursive;
   font-size: 20px;
-  color: #990000; }
+  line-height: 20px;
+  letter-spacing: 5px; }
 #content section h2 {
+  color: #732626;
+  font-family: "Prosto One", cursive;
   font-size: 18px;
-  color: #732626; }
+  line-height: 20px;
+  letter-spacing: 3px; }
 #content section h3 {
   font-size: 12px;
   color: #cccccc; }
+#content section p {
+  color: #ff0033;
+  font-family: "Prosto One", cursive;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 3px;
+  margin: 5px;
+  padding: 10px;
+  border: 2px dashed green;
+  border-radius: 20px;
+  background-color: yellow;
+  box-shadow: 5px 5px 10px black; }
 
 footer {
   background: #990000;
