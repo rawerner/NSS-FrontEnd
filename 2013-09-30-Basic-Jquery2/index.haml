@@ -1,0 +1,34 @@
+!!! 5
+%html{lang: 'en'}
+ %head
+ %meta{charset: 'utf-8'}
+ %title HAML
+ %link{rel: 'stylesheet', href: 'css/normalize.css'}
+ %link{rel: 'stylesheet', href: 'css/style.css'}
+
+ %body
+  %input#button1{type:'button', value:'Make Me Green'}
+  #green Green Div
+
+  %input#name_txt{type:'text', placeholder:'Enter Your Name'}
+  %input#name_btn{type:'button', value:'Count the Characters'}
+   #name_div BLANK
+
+  %input#num1{type:'text', placeholder:'Num 1'}
+  %input#num2{type:'text', placeholder:'Num 2'}
+  %input#add{type:'button', value:'Add!'}
+  #calculator RESULTS
+
+  %input#colors{type:'text', placeholder:'blue, green, yellow'}
+  %input#colorbtn{type:'button', value:'Color Me!'}
+  #one 1
+  #two 2
+  #three 3
+
+  %input#quantity{type:'text', placeholder:'enter a number'}
+  %input#makedivs_btn{type:'button', value:'make these divs'}
+  #container
+
+  %script{src: 'js/jquery-1.10.2.min.js'}
+  %script{src: 'js/underscore-min.js'}
+  %script{src: 'js/main.js'}
