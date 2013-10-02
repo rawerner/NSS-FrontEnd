@@ -1,0 +1,12 @@
+body > #div {
+  background: #ccc;
+  height: 100px;
+  width: auto;
+  margin: auto;
+  padding: 30px; }
+
+#titlebox {
+  display: block; }
+
+#balance.inthered {
+  background: red; }

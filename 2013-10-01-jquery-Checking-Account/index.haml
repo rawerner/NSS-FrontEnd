@@ -1,0 +1,19 @@
+!!! 5
+%html{lang: 'en'}
+ %head
+ %meta{charset: 'utf-8'}
+ %title HAML
+ %link{rel: 'stylesheet', href: 'css/normalize.css'}
+ %link{rel: 'stylesheet', href: 'css/style.css'}
+
+ %body
+  #div
+   #titlebox Bank of Nashville
+   #balance $00.00
+   %input#amount{type: 'text', placeholder: '$'}
+   %input#deposit_btn{type: 'button', value: 'Deposit'}
+   %input#withdrawl_btn{type: 'button', value: 'Withdrawl'}
+
+  %script{src: 'js/jquery-1.10.2.min.js'}
+  %script{src: 'js/underscore-min.js'}
+  %script{src: 'js/main.js'}

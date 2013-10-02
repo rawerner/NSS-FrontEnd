@@ -1,0 +1,17 @@
+!!! 5
+%html{lang: 'en'}
+ %head
+ %meta{charset: 'utf-8'}
+ %title HAML
+ %link{rel: 'stylesheet', href: 'css/normalize.css'}
+ %link{rel: 'stylesheet', href: 'css/style.css'}
+
+ %body
+  %div Reverse Pig Latin Converter
+  %input#original{type: 'text'}
+  %input#convert{type: 'text', readonly: true}
+  %input#btn{type: 'button', value:'Convert'}
+
+  %script{src: 'js/jquery-1.10.2.min.js'}
+  %script{src: 'js/underscore-min.js'}
+  %script{src: 'js/main.js'}
