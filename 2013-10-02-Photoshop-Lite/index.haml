@@ -7,12 +7,15 @@
  %link{rel: 'stylesheet', href: 'css/style.css'}
 
  %body
-  %h1 Color Selector
+  %h1 Photoshop Lite
   %input#color{type: 'text', autofocus: true, placeholder: '#abE021'}
   %input#add_color{type: 'button', value: 'Add Color'}
-  #brush.box
-  .clear
+  %span#brush
   #colors
+  .clear
+  %input#amount{type: 'text', placeholder: '3'}
+  %input#add_box{type: 'button', value: 'Add Boxes'}
+  #boxes
 
   %script{src: 'js/jquery-1.10.2.min.js'}
   %script{src: 'js/underscore-min.js'}
