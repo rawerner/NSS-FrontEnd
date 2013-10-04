@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head></head>
+  <meta charset='utf-8'>
+  <title>HAML</title>
+  <link href='css/normalize.css' rel='stylesheet'>
+  <link href='css/style.css' rel='stylesheet'>
+  <body></body>
+  <div id='div'>
+    <h1>The Geek Bank</h1>
+    <img id='logo'>
+    <input id='logoUrl' placeholder='http://website.com/images/image.jpg' type='text'>
+    <input id='setLogoBtn' type='button' value='Set Logo'>
+    <div class='clear'></div>
+    <input class='itemmargin' id='balanceWindow' readonly type='text'>
+    <input class='itemmargin' id='startingBalance' placeholder='2500' type='text'>
+    <input class='itemmargin' id='setBalanceBtn' type='button' value='Set Balance'>
+    <div class='clear'></div>
+    <input class='itemmargin' id='amount' placeholder='enter amount...' type='text'>
+    <input class='itemmargin' id='depositFundBtn' type='button' value='Deposit'>
+    <input class='itemmargin' id='withdrawFundBtn' type='button' value='Withdraw'>
+    <div class='clear'></div>
+  </div>
+  <div id='transactions'>
+    <h2>Transaction List</h2>
+    <div id='depositList'>
+      <h3>Deposits</h3>
+      <ul id='depositDetail'></ul>
+    </div>
+    <div id='withdrawList'>
+      <h3>Withdrawls</h3>
+      <ul id='withdrawDetail'></ul>
+    </div>
+    <script src='js/jquery-1.10.2.min.js'></script>
+    <script src='js/underscore-min.js'></script>
+    <script src='js/main.js'></script>
+  </div>
+</html>

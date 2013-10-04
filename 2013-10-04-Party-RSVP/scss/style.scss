@@ -1,0 +1,72 @@
+@import url(http://fonts.googleapis.com/css?family=Bigelow+Rules);
+
+body{
+  background-color: #F9ECD1;
+}
+
+h1{
+font-family: 'Bigelow Rules', cursive;
+font-size: 60px;
+margin-width: auto;
+margin-top: 20px;
+}
+
+section{
+  width: 940px;
+  height:auto;
+  margin: auto;
+}
+
+table{
+  width:auto;
+}
+
+table th{
+  background: #5BC5BF;
+  padding: 10px;
+  width: 300px;
+}
+
+table tr{
+ background-color: #fff;
+}
+
+#add{
+  position: fixed;
+  left: 920px;
+  top: 100px;
+
+}
+
+.nukebtn{
+  margin-left: 60px;
+  width:80px;
+}
+
+.ctrl{
+  width: 400px;
+}
+
+.name{
+  font-weight: bold;
+  font-size:14px;
+  padding: 10px;
+}
+
+.arrows{
+  padding-left:20px;
+}
+
+.arrowdown{
+  width: 18px;
+  height: 18px;
+  margin:3px;
+
+}
+
+.arrowup{
+  width: 18px;
+  height: 18px;
+  margin: 3px;
+
+}
