@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head></head>
+  <meta charset='utf-8'>
+  <title>HAML</title>
+  <link href='css/normalize.css' rel='stylesheet'>
+  <link href='css/style.css' rel='stylesheet'>
+  <body>
+    <div id='wrapper'>
+      <header>
+        <h1>Tasklist.it</h1>
+      </header>
+      <section id='toDoForm'>
+        <h2>Enter A Task..</h2>
+        <p class='headings'>Task to do</p>
+        <input id='taskName' placeholder='Wash the car' type='text'>
+        <p class='headings'>Date</p>
+        <input id='dueDate' placeholder='00/00/000' type='text'>
+        <p class='headings'>Category Color</p>
+        <input id='colorBox' type='text'>
+        <input id='submitTask' type='button' value='Add Task'>
+      </section>
+      <section id='taskList'>
+        <table>
+          <tr>
+            <th>Due Date</th>
+            <th>Task</th>
+            <th>Category Color</th>
+            <th>Done</th>
+            <th>Remove</th>
+            <th>Prioritize</th>
+          </tr>
+        </table>
+      </section>
+      <div class='clear' id='div'></div>
+    </div>
+    <script src='js/jquery-1.10.2.min.js'></script>
+    <script src='js/underscore-min.js'></script>
+    <script src='js/main.js'></script>
+  </body>
+</html>

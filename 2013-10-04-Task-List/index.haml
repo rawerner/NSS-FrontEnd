@@ -1,0 +1,37 @@
+!!! 5
+%html{lang: 'en'}
+ %head
+ %meta{charset: 'utf-8'}
+ %title HAML
+ %link{rel: 'stylesheet', href: 'css/normalize.css'}
+ %link{rel: 'stylesheet', href: 'css/style.css'}
+
+ %body
+  #wrapper
+   %header
+    %h1 Tasklist.it
+   %section#toDoForm
+    %h2 Enter A Task..
+    %p.headings Task to do
+    %input#taskName{type: "text", placeholder: "Wash the car"}
+    %p.headings Date
+    %input#dueDate{type: "text", placeholder: "00/00/000"}
+    %p.headings Category Color
+    %input#colorBox{type: "text",}
+    %input#submitTask{type: "button", value: "Add Task"}
+
+   %section#taskList
+    %table
+     %tr
+      %th Due Date
+      %th Task
+      %th Category Color
+      %th Done
+      %th Remove
+      %th Prioritize
+   #div.clear
+
+
+  %script{src: 'js/jquery-1.10.2.min.js'}
+  %script{src: 'js/underscore-min.js'}
+  %script{src: 'js/main.js'}

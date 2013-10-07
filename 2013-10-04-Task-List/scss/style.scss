@@ -1,0 +1,108 @@
+@import url(http://fonts.googleapis.com/css?family=Lily+Script+One);
+@import url(http://fonts.googleapis.com/css?family=Andika);
+@import url(http://fonts.googleapis.com/css?family=Sintony);
+
+body{
+ background: #F9ECD1;
+}
+header{
+  margin-left:20px;
+  padding: 10px;
+}
+
+h1{
+ font-size: 60px;
+ padding-top:15px;
+ padding-bottom: 0px;
+ margin: 0px;
+ font-family: 'Lily Script One', cursive;
+ font-weight: normal;
+ color: #ED1D24;
+}
+
+h2{
+  margin: 0px;
+  font-family: 'Andika', sans-serif;
+  font-size: 20px;
+  padding:0px;
+  color: #fff;
+}
+
+p{
+ font-family: 'Sintony', sans-serif;
+ font-size:14px;
+}
+
+
+table tr th{
+  min-width: 150px;
+  padding-bottom:10px;
+}
+
+
+
+table tr td{
+  min-width: 150px;
+  padding:3px;
+  text-align: center;
+  background: #fff;
+  color: #000;
+}
+#wrapper{
+  width:auto;
+  height:auto;
+  margin: auto;
+}
+
+.headings{
+  margin-top:15px;
+  margin-bottom:1px;
+  font-family: 'Sintony', sans-serif;
+  font-size:16px;
+  color: #fff;
+}
+
+#submitTask{
+  margin-top: 10px;
+}
+
+#taskList{
+  float: left;
+  width: auto;
+  height: auto;
+  background: #5BC5BF;
+  padding: 15px;
+  margin: 0 10px 20px 10px;
+  color: #fff;
+
+
+}
+#toDoForm{
+  float:left;
+  width: 225px;
+  height: auto;
+  background: #5BC5BF;
+  padding: 20px;
+  margin: 0 0 20px 20px;
+  border-radius: 10px;
+}
+
+.clear{
+  clear: both;
+}
+
+.finished{
+  background: #ccc;
+}
+
+.arrows{
+  height: 18px;
+  width:18px;
+}
+
+.colorboxed{
+
+ height:15px;
+ width:60px;
+ margin: auto;
+}
