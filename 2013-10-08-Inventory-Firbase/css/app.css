@@ -1,0 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=Sanchez);
+body {
+  background-color: #EDEAE3; }
+
+table#items {
+  width: 100%; }
+
+table tr td {
+  text-align: center; }
+
+table tr.even, table tr.alt, table tr:nth-of-type(2n) {
+  background: #E6E6E6; }
+
+table th {
+  background: #86C543; }
+
+h1 {
+  font-family: 'Sanchez', serif;
+  color: #34302D; }
