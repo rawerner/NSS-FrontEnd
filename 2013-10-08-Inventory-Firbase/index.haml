@@ -24,7 +24,7 @@
     .small-2.column
       %input#name{type: 'text', autofocus: true, placeholder: 'Item name'}
     .small-1.column
-      %input#amount{type: 'text', placeholder: 'Qty'}
+      %input#count{type: 'text', placeholder: 'Qty'}
     .small-1.column
       %input#value{type: 'text', placeholder: 'Cost'}
     .small-2.column
@@ -35,6 +35,11 @@
       %input#date{type: 'text', placeholder: 'Date Purchased'}
     .small-2.column
       %input#add.button.success.radius.small{type: 'button', value: "Add Item"}
+  .row
+    .small-2.columns
+      %p Grand Total
+    .small-10.columns
+      %p#grand-total
   .row
     .small-12.columns
       %table#items
