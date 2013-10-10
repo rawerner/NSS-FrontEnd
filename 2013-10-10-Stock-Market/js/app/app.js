@@ -3,9 +3,11 @@
 //Firebase Schema
 var Δdb;
 var Δbalance;
+var Δstocks;
 
 //Local Schema
 var db = {};
+
 
 $(document).ready(initialize);
 
@@ -14,34 +16,34 @@ function initialize(){
   Δdb = new Firebase('https://stock-market-rw.firebaseio.com/');
   $('#addFunds').click(addFunds);
   $('#buy').click(buy);
-  Δbalance = Δdb.child('items');
+  Δbalance = Δdb.child('balance');
   Δstocks = Δdb.child('stocks');
 }
 
 function addFunds(){
-
+  var balance = parseInt($('#funds').val(), 10);
+  $('#balance').text('Account Balance: $' + balance + '.00');
+  Δbalance.update(balance);
 }
 
 function buy(){
   var symbol = $('#symbol').val();
   var quantity = parseInt($('#quantity').val(), 10);
 
-  var quote = data.Data;
-
   getStockQuote(symbol, function(data, textStatus, jqXHR){
+debugger;
+    var quote = data.Data;
 
-    if(quote.LastPrice * quantity <= db.balance.cash){
-      db.balance.cash -= quote.LasPrice * quantity;
-      db.balance.stock += quote.LastPrice * quantity;
-      db.balance.total = db.balance.cash + db.balance.stock;
-      Δbalance.set(db.balance);
+    var total = quote.LastPrice * quantity;
 
-      var stock = {};
-      stock.symbol = symbol;
-      stock.purchasePrice = quote.LastPrice;
-      stock.quantity = quantity;
-      Δstocks.push(stock);
-  }
+    Δbalance.set(total);
+
+    var stock = {};
+    stock.symbol = symbol;
+    stock.purchasePrice = quote.LastPrice;
+    stock.quantity = quantity;
+    Δstocks.push(stock);
+
 
     $('#symbol').val('');
     $('#quantity').val('');
