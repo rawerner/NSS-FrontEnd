@@ -23,28 +23,27 @@
     .small-6.columns
   .row
     .small-3.columns
-      %input#funds{type: 'text', placeholder: 'funds'}
+      %input#deposit{type: 'text', placeholder: 'cash deposit?'}
     .small-3.columns
-      %input#addFunds.button.small.success.radius{type: 'button', value: 'Set'}
+      %input#addDeposit.button.small.success.radius{type: 'button', value: 'Deposit Cash'}
     .small-6.columns
   .row
     .small-8.columns
-      %h4#balance Account Balance
+      %h4#cash Cash Available:
     .small-2.columns
-      %input#updateInterval{type: 'text', placeholder: 'interval'}
+      %input#interval{type: 'text', placeholder: 'interval'}
     .small-2.columns
-      %input#buy.button.small.success.radius{type: 'button', value: 'Set'}
+      %input#set.button.small.success.radius{type: 'button', value: 'Set'}
   .row
     .small-12.columns
-      %table
-        %th Name
-        %th Symbol
-        %th Quote
-        %th # Purchased
-        %th Current Price
-  .row
-    .small-12.columns
-    #rows
+      %table#listing
+        %tr
+          %th Name
+          %th Symbol
+          %th Purchase Price
+          %th Shares
+          %th Current Market Price
+          %th Net -/+
   .row
     .small-12.columns
     %h4 Total Balance

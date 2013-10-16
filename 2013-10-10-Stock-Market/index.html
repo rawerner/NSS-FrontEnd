@@ -30,38 +30,37 @@
   </div>
   <div class='row'>
     <div class='small-3 columns'>
-      <input id='funds' placeholder='funds' type='text'>
+      <input id='deposit' placeholder='cash deposit?' type='text'>
     </div>
     <div class='small-3 columns'>
-      <input class='button small success radius' id='addFunds' type='button' value='Set'>
+      <input class='button small success radius' id='addDeposit' type='button' value='Deposit Cash'>
     </div>
     <div class='small-6 columns'></div>
   </div>
   <div class='row'>
     <div class='small-8 columns'>
-      <h4 id='balance'>Account Balance</h4>
+      <h4 id='cash'>Cash Available:</h4>
     </div>
     <div class='small-2 columns'>
-      <input id='updateInterval' placeholder='interval' type='text'>
+      <input id='interval' placeholder='interval' type='text'>
     </div>
     <div class='small-2 columns'>
-      <input class='button small success radius' id='buy' type='button' value='Set'>
+      <input class='button small success radius' id='set' type='button' value='Set'>
     </div>
   </div>
   <div class='row'>
     <div class='small-12 columns'>
-      <table>
-        <th>Name</th>
-        <th>Symbol</th>
-        <th>Quote</th>
-        <th># Purchased</th>
-        <th>Current Price</th>
+      <table id='listing'>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Purchase Price</th>
+          <th>Shares</th>
+          <th>Current Market Price</th>
+          <th>Net -/+</th>
+        </tr>
       </table>
     </div>
-  </div>
-  <div class='row'>
-    <div class='small-12 columns'></div>
-    <div id='rows'></div>
   </div>
   <div class='row'>
     <div class='small-12 columns'></div>

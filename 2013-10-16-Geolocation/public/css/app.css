@@ -1,0 +1,27 @@
+html, body, #left, #map-canvas {
+  height: 100%; }
+
+body {
+  background: #252525; }
+
+#map-canvas {
+  width: 100%;
+  border: 1px solid black; }
+
+#left {
+  width: 80%;
+  float: left;
+  height: 100%; }
+
+#right {
+  width: 20%;
+  height: 100%;
+  float: left;
+  padding: 10px; }
+
+h3 {
+  padding-top: 25px; }
+
+h3 {
+  color: #ccc;
+  font-size: 14px; }

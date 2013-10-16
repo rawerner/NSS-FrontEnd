@@ -18,7 +18,7 @@ function initialize(){
   $(document).foundation();
   $('#add').click(add);
   $('#save').click(save);
-
+debugger;
   Δdb = new Firebase('https://inventory-rw.firebaseio.com/');
   Δitems = Δdb.child('items');
   Δperson = Δdb.child('person');
