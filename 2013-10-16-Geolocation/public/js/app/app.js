@@ -3,10 +3,12 @@
 // Firebase Schema
 var Δdb;
 var Δpositions;
+var Δfavorites;
 
 // Local Schema (defined in keys.js)
 db.positions = [];
 db.path = [];
+db.favorites = [];
 
 $(document).ready(initialize);
 
@@ -14,11 +16,17 @@ function initialize(){
   $(document).foundation();
   Δdb = new Firebase(db.keys.firebase);
   Δpositions = Δdb.child('positions');
+  Δfavorites = Δdb.child('favorites');
   Δpositions.on('child_added', dbPositionAdded);
+  Δfavorites.on('child_added', dbFavoriteAdded);
   $('#start').click(clickStart);
+  $('#addFav').click(clickAddFav);
   $('#erase').click(clickErase);
+  $('#stop').click(clickStop);
   initMap(36, -86, 5);
   Δpositions.remove();
+  Δfavorites.remove();
+
 
 
 }
@@ -46,6 +54,11 @@ function dbPositionAdded(snapshot){
 
 }
 
+function dbFavoriteAdded(snapshot){
+  var favorite = snapshot.val();
+  htmlAddFavIcon(favorite);
+}
+
 
 // -------------------------------------------------------------------- //
 // -------------------------------------------------------------------- //
@@ -53,11 +66,16 @@ function dbPositionAdded(snapshot){
 
 
 function htmlAddStartIcon(latLng){
-  var image = '/img/start.png';
-  db.marker = new google.maps.Marker({map: db.map, Position: latLng, icon: image});
-
+  var start = '/img/start.png';
+  db.marker = new google.maps.Marker({map: db.map, Position: latLng, icon: start, title: 'Start'});
 }
 
+function htmlAddFavIcon(favorite){
+  var fav = '/img/fav.png';
+  var name = favorite.name;
+  var latLng = new google.maps.LatLng(favorite.latitude, favorite.longitude);
+  db.marker = new google.maps.Marker({map: db.map, Position: latLng, icon: fav, title: name});
+}
 
 function htmlInitializePolyline(){
   var polyline = new google.maps.Polyline({
@@ -71,6 +89,11 @@ function htmlInitializePolyline(){
   db.path = polyline.getPath();
 }
 
+function htmlSetCenterZoom(latLng){
+  db.map.setCenter(latLng);
+  db.map.setZoom(19);
+}
+
 // -------------------------------------------------------------------- //
 // -------------------------------------------------------------------- //
 // -------------------------------------------------------------------- //
@@ -81,10 +104,25 @@ function clickStart(){
 
 }
 
+function clickAddFav(){
+  var name = getValue('#favorite');
+
+  var favorite = {};
+  favorite.latitude = db.recentposition.latitude;
+  favorite.longitude = db.recentposition.longitude;
+  favorite.name = name;
+
+  Δfavorites.push(favorite);
+}
+
 function clickErase(){
   Δpositions.remove();
   db.positions = [];
   db.path = [];
+}
+
+function clickStop(){
+  navigator.geolocation.clearwatch(db.watchID);
 }
 
 // -------------------------------------------------------------------- //
@@ -102,6 +140,8 @@ function geoSuccess(location) {
   position.longitude = location.coords.longitude;
   position.altitude = location.coords.altitude || 0;
   position.time = moment().format();
+
+  db.recentposition = position;
   Δpositions.push(position);
 }
 
@@ -109,15 +149,14 @@ function geoError() {
   console.log('Sorry, no position available.');
 }
 
+
+
+
+
 // -------------------------------------------------------------------- //
 // -------------------------------------------------------------------- //
 // -------------------------------------------------------------------- //
 
-
-function htmlSetCenterZoom(latLng){
-  db.map.setCenter(latLng);
-  db.map.setZoom(19);
-}
 
 
 function getValue(selector, fn){

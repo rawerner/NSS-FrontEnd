@@ -4,39 +4,31 @@
 <head>
   <meta charset='utf-8'>
   <meta content='width=device-width' name='viewport'>
-  <title>Geolocation App</title>
+  <title>Master Template</title>
   <link href='/css/normalize.css' rel='stylesheet'>
   <link href='/css/foundation.css' rel='stylesheet'>
   <link href='/css/app.css' rel='stylesheet'>
   <script src='/js/vendor/custom.modernizr.js'></script>
-  <script src='/js/app/keys.js'></script>
+  <link href='/css/qunit-theme-gabe.css' rel='stylesheet'>
 </head>
 <body>
-  <div id='left'>
+  <div id='qunit'></div>
+  <div id='qunit-fixture'>
     <div id='map-canvas'></div>
-  </div>
-  <div id='right'>
     <div class='row'>
-      <div class='small-6 columns'>
-        <input class='button success small radius' id='start' type='button' value='Start'>
-      </div>
-      <div class='small-6 columns'>
-        <input class='button small alert radius' id='stop' type='button' value='Stop'>
+      <div class='small-12 columns'>
+        <h1>Heroku Example</h1>
       </div>
     </div>
     <div class='row'>
-      <div class='small-12 columns'>
-        <input id='favorite' type='text' value='Starbucks'>
+      <div class='small-4 column'>
+        <h3>This</h3>
       </div>
-    </div>
-    <div class='row'>
-      <div class='small-12 columns'>
-        <input class='button small radius' id='addFav' type='button' value='Add Fav'>
+      <div class='small-4 column'>
+        <h3>Is</h3>
       </div>
-    </div>
-    <div class='row'>
-      <div class='small-12 columns'>
-        <input class='button small alert radius' id='erase' type='button' value='Start over'>
+      <div class='small-4 column'>
+        <h3>Cool!</h3>
       </div>
     </div>
   </div>
@@ -47,4 +39,6 @@
   <script src='https://cdn.firebase.com/v0/firebase.js'></script>
   <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAKzrqufcUU4vqTQZQfk4Ib5GxAFO-542s&amp;sensor=true'></script>
   <script src='/js/app/app.js'></script>
+  <script src='/js/vendor/qunit-1.12.0.js'></script>
+  <script src='/js/tests/master.js'></script>
 </body>
