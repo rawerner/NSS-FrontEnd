@@ -1,0 +1,23 @@
+.row {
+  padding-top: 10px; }
+
+ul#history {
+  width: 300px;
+  height: 200px; }
+
+ul li {
+  list-style: none; }
+
+ul li span {
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold; }
+
+#result {
+  height: 40px;
+  width: 100%;
+  background: #ccc;
+  padding: 5px; }
+
+#history > li:nth-child(even) {
+  background: #E6E6E6; }
